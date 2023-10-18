@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Company</title>
+    <style>
+        body {
+             background-image: url('agent2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .left-side {
+            flex: 1;
+            background-color:#52bfc8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .left-side h1 {
+            font-weight: bold;
+            text-transform: uppercase;
+            color:#15525c;
+        }
+        .left-side a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .left-side a:hover {
+            background-color: #15525c;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
+        .form-container {
+        background-color:white; 
+        border-radius: 10px;
+        padding: 30px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        margin: 0 auto;
+    }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #52bfc8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #15525c;
+        }
+        .agent-table-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:#52bfc8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="form-container">
+            
+            <div class="left-side">
+            <h1>Add Agent</h1>
+            <a href="display-agent.jsp" class="agent-table-button">Agent Table</a>
+            <a href="manage-medicine.html">Medicine</a> <!-- Link to the Company page -->
+            <a href="company-page.html">Company</a> <!-- Link to the Agent page -->
+        </div>
+            <form method="post" action="agent-page.jsp">
+                <label for="aname">Agent Name:</label>
+                <input type="text" id="aname" name="aname" required>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+                <label for="address">Address</label>
+                 <input type="text" id="address" name="address" required>
+                <label for="experience">Experience:</label>
+                <input type="number" id="experience" name="experience" required>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
