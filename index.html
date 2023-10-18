@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('login.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        .input-field {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #368977;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0b4135;
+        }
+         .signup-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #368977;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .signup-button:hover {
+            background-color: #0b4135;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <button class="signup-button" onclick="openSignupPage()">Sign Up</button>
+            <h1>Login</h1>
+            <div class="input-container">
+                <input class="input-field" type="text" id="username" placeholder="Username" required>
+                <input class="input-field" type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="openWelcomePage()">Login</button>
+                <button class="button" onclick="closeWindow()">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openWelcomePage() {
+            
+            window.open('welcome.html');
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+         function openSignupPage() {
+            window.open('signup.html');
+        }
+    </script>
+</body>
+</html>
