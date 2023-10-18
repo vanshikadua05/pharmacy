@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Medicine</title>
+    <style>
+        body {
+            
+             background-image: url('medicines.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130vh;
+            margin: 0;
+        }
+        .left-side {
+            flex: 1;
+            background-color: #5ab7c1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+           
+        }
+        .left-side h1 {
+            color:#045962;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .left-side a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .left-side a:hover {
+            background-color: #045962;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+           
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+           
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #5ab7c1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #045962;
+        }
+        .medicine-table-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #045962;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            
+            <div class="left-side">
+            <h1>Manage Medicine</h1>
+            <a href="display-medicine.jsp" class="medicine-table-button">Medicine Table</a>
+            <a href="company-page.html">Company</a> <!-- Link to the Company page -->
+            <a href="agent-page.html">Agent</a> <!-- Link to the Agent page -->
+        </div>
+            <form method="post" action="manage-medicine.jsp">
+                <label for="id">Id:</label>
+                <input type="number" id="id" name="id" required>
+                <label for="medname">Medicine Name:</label>
+                <input type="text" id="medname" name="medname" required>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+                <label for="manudate">Manufacturing Date:</label>
+                <input type="date" id="manudate" name="manudate" required>
+                <label for="expdate">Expiry Date:</label>
+                <input type="date" id="expdate" name="expdate" required>
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" required>
+                <input type="submit" value="Add">
+            </form>
+            <form action="delete-medicine.jsp" method="post">
+        <label for="id">Medicine ID:</label>
+        <input type="number" id="mid" name="id" required>
+        <input type="submit" value="Delete">
+    </form>
+        </div>
+    </div>
+</body>
+</html>
